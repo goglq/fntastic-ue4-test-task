@@ -76,8 +76,6 @@ void AFntasticCharacter::Interact()
 	FVector start = location;
 	FVector	end = start + (rotation.Vector() * InteractionLength);
 
-	DrawDebugLine(GetWorld(), start, end, FColor::Cyan, false, 3.0f, 0U, 1.0f);
-
 	FCollisionQueryParams params;
 	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECC_Visibility, params))
 	{
